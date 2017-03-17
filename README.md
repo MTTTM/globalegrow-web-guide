@@ -41,7 +41,7 @@
 我们尽最大的努力确保正文没有错误，但错误可能在所难免，技术委员会有考虑不全面的地方。如本手册 出现错别字、遗漏、错误等任何问题，大家可以使用以下二种方法给我们反馈：
 
 1. 鼠标悬停在正文中，正文右边会出现 "+" 符号，点击后输入反馈，点击 "Post" ；
-2. Fork 本手册的 [Github](https://wuuashen.gitbooks.io/globalegrow-web-standard/content/)，提交在Git，审核通过后我会统一合并。
+2. Fork 本手册的 [Github](https://github.com/wuuashen/globalegrow-web-standard)，使用Git提交，审核通过后我会统一合并。
 
 
 ## 目标
