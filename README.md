@@ -1,6 +1,7 @@
-# 
 
-![Globalegrow](http://www.globalegrow.com/temp/skin4/dist/images/domeimg/ch/logo.jpg)
+![Globalegrow](http://www.globalegrow.com/temp/skin4/dist/images/domeimg/ch/logo.jpg) 
+
+## 《环球易购前端开发规范》
 
 ---
 

@@ -2,18 +2,107 @@
 --- 
 
 ## 基本
+   
+- 整站样式要reset，因各站略有不同，这里不作统一，参考以下资料
+  * [normalize.css](http://necolas.github.io/normalize.css/)
+  * [cssreset](http://cssreset.com/)
+  
+  
+- 所有的字体大小都不应该小于 12px
+  
+- 对于属性值或颜色参数，省略小于 1 的小数前面的 0 （例如，.5 代替 0.5；-.5px 代替 -0.5px）。
 
-- 属性冒号后面要空一格
+- 十六进制值应该**全部小写**，例如，#fff。在扫描文档时，小写字符易于分辨，因为他们的形式更易于区分
+
+- 避免为 0 值指定单位，例如，用 margin: 0; 代替 margin: 0px;
+
+- 需要添加 hack 时应尽可能考虑是否可以采用其他方式解决，如合理的HTML结构、更高明的CSS用法，通常 hack 会导致维护成本的增加或者使某些预处理器无法正确识别
+
+- Class 命名不得以样式信息进行描述，如 .float-right、text-red 等。
+
+
+## 命名
+
+- #### 避免使用 id 命名
+对样式的处理，避免使用id，id只能处理js的操作或者唯一标识
+
+    ```css
+    /* Must Not */
+    #header-search{ ... }
+    #headerSearch{ ... }
+    #header_search{ ... }
+    /* 等等... */
+    
+    /* Must */
+    .header-search{ ... }
+    ```
+
+
+- #### class 命名
+    - class 名称中只能出现小写字符和中划线（与 js 变量命名区别开，不再使用驼峰和下划线）。破折号应当用于相关 class 的命名（类似于命名空间）（例如，.btn 和 .btn-danger）
+    - 避免过度任意的简写。.btn 代表 button，但是 .s 不能表达任何意思
+    - class 名称应当尽可能短，并且意义明确
+    - 基于最近的父 class 或基本（base） class 作为新 class 的前缀
+    ```css
+    /* Must Not */
+    .hotelTitle {font-weight: bold;}
+    .div1{ ... }
+    .b{ ... }
+    /* Must */
+    .hotel-title {font-weight: bold;}
+    .main-content{ ... }
+    .btn{ ... }
+    ```
+    扩展阅读：[CSS样式名中的下划线与连字符](http://www.cnblogs.com/kaiye/archive/2011/06/13/3039046.html)
+    
+- #### 预处理器
+预处理器中的变量、Extend、Mixin 等可考虑采用驼峰式命名
+
+    ```sass
+    /* 变量 */
+    $colorBlack: #000;
+    
+    /* 函数 */
+    @function pxToRem($px) { ... }
+    
+    /* Mixin */
+    @mixin centerBlock { ... }
+    
+    /* placeholder */
+    %myDialog { ... }
+    ```
+
+
+## 选择器
+- 选择器嵌套要尽可能短，并且尽量限制组成选择器的元素个数，建议不要超过 3层，尤其在使用 less/sass时，容易嵌套太多层
+
+- 选择标签时，考虑到后期维护命名、层级可能会冲突的问题
 
 ```css
-/* Must Not */
-.logo{padding:12px;width:120px;}
+/* Bad */
+span { ... }
+.page-container #stream .stream-item .tweet .tweet-header .username { ... }
+.avatar { ... }
 
-/* Must */
-.logo {padding: 20px;width: 120px;}
+/* Good */
+.avatar { ... }
+.tweet-header .username { ... }
+.tweet .avatar { ... }
 ```
 
-- 建议单行书写样式，有以下原因
+- 如无必要，不得为 id、class 选择器添加类型选择器进行限定
+
+```css
+/* Bad */
+div#error, p.danger-message { ... }
+
+/* Good */
+#error, .danger-message { ... }
+```
+
+## 样式换行
+
+建议单行书写样式，有以下原因：
 
   * 每个css的属性都写在一行上，利于上下文class的查找，在使用less或sass会更明显
   * 每行一个属性，会造成css文件行数过多，不利于大型项目维护
@@ -50,83 +139,48 @@
     sublime 插件 [CSS Format](https://packagecontrol.io/packages/CSS%20Format) 可以统一处理
 
   > 以下演示为方便对比说明，**示例代码**可能会使用一行一个属性值的情况， 与规范有冲突，特此说明。
-   
-- 整站样式要reset，因各站略有不同，这里不作统一，参考以下资料
-  * [normalize.css](http://necolas.github.io/normalize.css/)
-  * [cssreset](http://cssreset.com/)
   
-- 所有的字体大小都不应该小于 12px
-  
-- 对于属性值或颜色参数，省略小于 1 的小数前面的 0 （例如，.5 代替 0.5；-.5px 代替 -0.5px）。
+## 空格
 
-- 十六进制值应该**全部小写**，例如，#fff。在扫描文档时，小写字符易于分辨，因为他们的形式更易于区分
+以下几种情况要空格：
 
-- 为选择器中的属性添加双引号，例如，input[type="text"]。[只有在某些情况下](http://mathiasbynens.be/notes/unquoted-attribute-values#css) 是可选的，但是，为了代码的一致性，建议都加上双引号
+- 属性冒号后面
+- ‘{’ 前面
+- 选择器'>', '+', '~'前后
+- 注释'/*'后和'*/'前
 
-- 避免为 0 值指定单位，例如，用 margin: 0; 代替 margin: 0px;
-
-- 需要添加 hack 时应尽可能考虑是否可以采用其他方式解决，如合理的HTML结构、更高明的CSS用法，通常 hack 会导致维护成本的增加或者使某些预处理器无法正确识别
-
-- Class 命名不得以样式信息进行描述，如 .float-right、text-red 等。
-
-
-## 避免使用 id 命名
-对样式的处理，避免使用id，id只能处理js的操作或者唯一标识
 ```css
 /* Must Not */
-#header-search{ ... }
-#headerSearch{ ... }
-#header_search{ ... }
-/* 等等... */
+.logo{padding:12px;width:120px;
+  >a{color:blue}
+}
 
 /* Must */
-.header-search{ ... }
+.logo {padding: 20px;width: 120px;
+  > a{color: blue}
+}
+```
+
+## 引号
+
+- 最外层统一使用双引号，不加引号或者单引号号 [只有在某些情况下](http://mathiasbynens.be/notes/unquoted-attribute-values#css) 是可选的，但是，为了代码的一致性，建议都加上双引号
+
+- url的内容要用引号
+
+- 属性选择器中的属性值需要引号
+
+``` css
+.element:after {
+    content: "";
+    background-image: url("logo.png");
+}
+
+li[data-type="single"] {
+    ...
+}
 ```
 
 
-## class 命名
-- class 名称中只能出现小写字符和中划线（与 js 变量命名区别开，不再使用驼峰和下划线）。破折号应当用于相关 class 的命名（类似于命名空间）（例如，.btn 和 .btn-danger）
-- 避免过度任意的简写。.btn 代表 button，但是 .s 不能表达任何意思
-- class 名称应当尽可能短，并且意义明确
-- 基于最近的父 class 或基本（base） class 作为新 class 的前缀
-```css
-/* Must Not */
-.hotelTitle {font-weight: bold;}
-.div1{ ... }
-.b{ ... }
-/* Must */
-.hotel-title {font-weight: bold;}
-.main-content{ ... }
-.btn{ ... }
-```
-扩展阅读：[CSS样式名中的下划线与连字符](http://www.cnblogs.com/kaiye/archive/2011/06/13/3039046.html)
-
-## 选择器
-- 选择器嵌套要尽可能短，并且尽量限制组成选择器的元素个数，建议不要超过 3层
-
-- 选择标签时，考虑到后期维护命名、层级可能会冲突的问题
-
-```css
-/* Bad */
-span { ... }
-.page-container #stream .stream-item .tweet .tweet-header .username { ... }
-.avatar { ... }
-
-/* Good */
-.avatar { ... }
-.tweet-header .username { ... }
-.tweet .avatar { ... }
-```
-
-- 如无必要，不得为 id、class 选择器添加类型选择器进行限定
-
-```css
-/* Bad */
-div#error, p.danger-message { ... }
-
-/* Good */
-#error, .danger-message { ... }
-```
 
 ## 声明顺序
 相关的属性声明应当归为一组，并按照下面的顺序排列:
@@ -241,11 +295,11 @@ div#error, p.danger-message { ... }
   @import "_dialog.less";
   
   /* Good */
-  @import "dialog";
+  @import "dialog.less";
   ```
 - 去掉不必要的父级引用符号'&'
 
-```css
+```sass
 /* not good */
 .element {
     & > .dialog {
@@ -264,7 +318,45 @@ div#error, p.danger-message { ... }
 - 利用性高的css或常量，尽量使用预处理器的变量、Extend、Mixin来减少重复的代码
 
 
+## 单行注释
 
+目前我们基本上所有网站都用了预处理器，所以以下注释规则只用适用于预处理器
+
+- 双斜线后，必须跟一个空格；
+
+- 缩进与下一行代码保持一致；
+
+- 可位于一个代码行的末尾，与代码间隔一个空格。
+
+```sass
+// 这是一行注释
+.element {
+    > .dialog {
+        ...
+    }
+}
+```
+
+## 多行注释
+
+最少三行, '*'后跟一个空格，具体参照下面的代码；
+建议在以下情况下使用：
+- 样式组件
+- 文件头部
+
+```sass
+/**
+ * 在'*'后面要空一格
+ * 第二行
+ */
+
+.element {
+    > .dialog {
+        ...
+    }
+}
+
+```
 
 
 ## 参考资料
