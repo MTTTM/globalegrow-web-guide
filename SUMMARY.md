@@ -6,7 +6,7 @@
     * [We love feedback](part2/README.md#feedback)
     * [Better tools for authors](part2/README.md#tools)
     
-* [开始1](README.md)
+* [开始2](README.md)
 * [通用规范](common.md)
  * [基本准则](common.md#基本准则)
  * [编码](common.md#编码)
