@@ -1,11 +1,19 @@
 
-![Globalegrow](http://www.globalegrow.com/temp/skin4/dist/images/domeimg/ch/logo.jpg) 
-
-## 《环球易购前端开发规范》
+![Globalegrow](http://www.globalegrow.com/temp/skin4/dist/images/domeimg/ch/logo.jpg)
 
 ---
 
+## 《环球易购前端开发规范》
+![Globalegrow](http://www.globalegrow.com/temp/skin4/dist/images/domeimg/ch/logo.jpg)
+
+---
+
+## 《环球易购前端开发规范》
+
+
 ## 开始
+
+
 所谓规范，是需要大家遵守的标准。为了项目的可维护性，以及前端团队的建设，特撰写此规范文档。
 - [线上地址](https://wuuashen.gitbooks.io/globalegrow-web-standard/content/)
 * [Github](https://github.com/wuuashen/globalegrow-web-standard)
