@@ -2,7 +2,7 @@
 
 * [开始](README.md)
 * [通用规范](common.md)
-	* [理想21](#理想)
+	* [基本准则](common.html#理想)
 	* [编码](common.md#编码)
 	* [缩进/换行](common.md#缩进/换行)
 	* [优雅降级和渐进增强](common.md#优雅降级和渐进增强)
@@ -10,6 +10,7 @@
 	* [协议](common.md#协议)
 	* [代码检查/验证](common.md#代码检查/验证)
 	* [参考资料](common.md#参考资料)
+
 * [HTML规范](html.md)
 * 基本
 * 文档类型
