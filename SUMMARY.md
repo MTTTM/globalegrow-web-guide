@@ -2,7 +2,7 @@
 
 * [开始](README.md)
 * [通用规范](common.md)
-	* [基本准则3](common.md)
+	* [基本准则](/globalegrow-web-standard/content/common.html#基本准则)
 	* [编码](common.md#编码)
 	* [缩进/换行](common.md#缩进/换行)
 	* [优雅降级和渐进增强](common.md#优雅降级和渐进增强)
