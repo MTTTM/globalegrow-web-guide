@@ -1,7 +1,7 @@
 #Summary
 * [Part I](part1/README.md)
-    * [Writing is nice](part1/README.md#writing)
-    * [GitBook is nice](part1/README.md#gitbook)
+    * [Writing is nice](html.md#type)
+    * [GitBook is nice](html.md#type)
 * [Part II](part2/README.md)
     * [We love feedback](part2/README.md#feedback)
     * [Better tools for authors](part2/README.md#tools)
@@ -22,7 +22,7 @@
  * [标签嵌套](#标签嵌套)
  * [一律使用小写字母](#一律使用小写字母)
  * [属性](属性)
- * [type](#type)
+ * [type](html.md#type)
  * [元素并排](#元素并排)
  * [元素转换](#元素转换)
  * [资源加载顺序](#资源加载顺序)
