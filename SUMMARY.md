@@ -2,7 +2,7 @@
 
 * [开始](README.md)
 * [通用规范](common.md)
-	* [基本准则](common.html#理想)
+	* [基本准则1](common.html#理想)
 	* [编码](common.md#编码)
 	* [缩进/换行](common.md#缩进/换行)
 	* [优雅降级和渐进增强](common.md#优雅降级和渐进增强)
