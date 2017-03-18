@@ -1,7 +1,7 @@
 #Summary
-* [Part I](html.md)
-    * [Writing is nice](html.md#type)
-    * [GitBook is nice](html.md#type)
+* [Part I](html/html.md)
+    * [Writing is nice](html/html.md#type)
+    * [GitBook is nice](html/html.md#type)
 * [Part II](part2/README.md)
     * [We love feedback](part2/README.md#feedback)
     * [Better tools for authors](part2/README.md#tools)
