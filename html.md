@@ -127,7 +127,7 @@ a 不允许嵌套 div这种约束属于语义嵌套约束，与之区别的约�
     </select>
     ```
 
-## Type 属性
+## type
 根据 HTML5 规范，在引入 CSS 和 JavaScript 文件时一般不需要指定 type 属性，因为 text/css 和 text/javascript 分别是它们的默认值。
 ```html
 <!-- Bad -->
