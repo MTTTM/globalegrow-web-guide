@@ -1,15 +1,15 @@
-# Summary
+#
+Summary
 
 * [开始](README.md)
 * [通用规范](common.md)
-	* [基本准则1](https://wuuashen.gitbooks.io/globalegrow-web-standard/content/common.html#基本准则)
-	* [编码](https://wuuashen.gitbooks.io/globalegrow-web-standard/content/common.html##编码)
-	* [缩进/换行](https://wuuashen.gitbooks.io/globalegrow-web-standard/content/common.html#缩进/换行)
-	* [优雅降级和渐进增强](https://wuuashen.gitbooks.io/globalegrow-web-standard/content/common.html#优雅降级和渐进增强)
-	* [协议](https://wuuashen.gitbooks.io/globalegrow-web-standard/content/common.html#协议)
-	* [代码检查/验证工具](https://wuuashen.gitbooks.io/globalegrow-web-standard/content/common.html#代码检查/验证工具)
-	* [参考资料](common.md#参考资料)
-
+ * [基本准则](common.md#基本准则)
+ * [编码](common.md#编码)
+ * [缩进/换行](common.md#缩进/换行)
+ * [优雅降级和渐进增强](common.md#优雅降级和渐进增强)
+ * [协议](common.md#协议)
+ * [代码检查/验证工具](common.md#代码检查/验证工具)
+ * [参考资料](common.md#参考资料)
 * [HTML规范](html.md)
 * 基本
 * 文档类型
