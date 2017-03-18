@@ -33,8 +33,8 @@
   * 简写形式的属性声明
   * 参考资料
 * [JavaScript](javascript.md)
+* [项目目录/文件](xiang-mu-mu-lu-jie-gou-gui-fan.md)
 * [注释](explanatory.md)
 * [兼容性](compatible.md)
 * [第三章节](3.md)
-* [尾巴](end.md)
 

@@ -10,11 +10,46 @@
 .logo{padding:12px;width:120px;}
 
 /* Must */
-.logo{padding: 20px;width: 120px;}
+.logo {padding: 20px;width: 120px;}
 ```
 
-- 建议单行书写样式，每个css的属性都写在一行上，利于上下文class的查找；每行一个属性，会造成css文件行数过多，不利于大型项目维护（sublime 插件 [CSS Format](https://packagecontrol.io/packages/CSS%20Format) 可以统一处理）。
-> 以下演示为方便对比说明，**示例代码**可能会使用一行一个属性值的情况， 与规范有冲突，特此说明。
+- 建议单行书写样式，有以下原因
+
+  * 每个css的属性都写在一行上，利于上下文class的查找，在使用less或sass会更明显
+  * 每行一个属性，会造成css文件行数过多，不利于大型项目维护
+  
+  ```sass
+  // Bad
+  .post-box {
+	position: relative;
+	padding-bottom: 20px;
+	overflow: hidden;
+
+	header {
+		height: 70px;
+		line-height: 70px;
+		padding: 0 20px;
+		border-bottom: 1px solid #ccc;
+
+		h3 {
+			font-size: 20px
+		}
+	}
+	// 更多 
+  }
+  
+  // Good
+  .post-box{position: relative; padding-bottom: 20px;overflow: hidden;
+      header{height: 70px;line-height: 70px;padding: 0 20px; border-bottom: 1px solid #ccc;
+          h3{font-size: 20px}
+      }
+      // 更多
+  }
+  ```
+  
+    sublime 插件 [CSS Format](https://packagecontrol.io/packages/CSS%20Format) 可以统一处理
+
+  > 以下演示为方便对比说明，**示例代码**可能会使用一行一个属性值的情况， 与规范有冲突，特此说明。
    
 - 整站样式要reset，因各站略有不同，这里不作统一，参考以下资料
   * [normalize.css](http://necolas.github.io/normalize.css/)
@@ -199,7 +234,35 @@ div#error, p.danger-message { ... }
       margin: 0 auto;
   }
   ```
+- @import 引入的文件不需要开头的'_'
+  
+  ```css
+  /* Bad */
+  @import "_dialog.less";
+  
+  /* Good */
+  @import "dialog";
+  ```
+- 去掉不必要的父级引用符号'&'
+
+```css
+/* not good */
+.element {
+    & > .dialog {
+        ...
+    }
+}
+
+/* good */
+.element {
+    > .dialog {
+        ...
+    }
+}
+```
+
 - 利用性高的css或常量，尽量使用预处理器的变量、Extend、Mixin来减少重复的代码
+
 
 
 
