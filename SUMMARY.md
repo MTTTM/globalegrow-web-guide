@@ -1,5 +1,5 @@
 #Summary
-* [Part I](part1/README.md)
+* [Part I](README.md)
     * [Writing is nice](html.md#type)
     * [GitBook is nice](html.md#type)
 * [Part II](part2/README.md)
