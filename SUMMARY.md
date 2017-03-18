@@ -2,7 +2,7 @@
 
 * [开始](README.md)
 * [通用规范](common.md)
-	* [基本准则](https://wuuashen.gitbooks.io/globalegrow-web-standard/content/common.html#基本准则)
+	* [基本准则1](https://wuuashen.gitbooks.io/globalegrow-web-standard/content/common.html#基本准则)
 	* [编码](https://wuuashen.gitbooks.io/globalegrow-web-standard/content/common.html##编码)
 	* [缩进/换行](https://wuuashen.gitbooks.io/globalegrow-web-standard/content/common.html#缩进/换行)
 	* [优雅降级和渐进增强](https://wuuashen.gitbooks.io/globalegrow-web-standard/content/common.html#优雅降级和渐进增强)
