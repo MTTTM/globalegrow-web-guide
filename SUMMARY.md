@@ -35,6 +35,5 @@
 * [JavaScript](javascript.md)
 * [项目目录/文件](folder.md)
 * [JSON数据传输标准](json.md)
-* [注释](explanatory.md)
 * [兼容性](compatible.md)
 

@@ -2,7 +2,6 @@
 ![Globalegrow](http://www.globalegrow.com/temp/skin4/dist/images/domeimg/ch/logo.jpg)
 
 ---
-<br>
 
 ## 环球易购前端开发规范
 所谓规范，是需要大家遵守的标准。为了项目的可维护性，以及前端团队的建设，特撰写此规范文档。
