@@ -7,7 +7,7 @@
 
 ### Your Content
 
-* [Directory structure](structure.md)
+* [Directory structure1](structure.md)
 * [Pages and Summary](pages.md)
 * [Configuration](config.md)
 * [Glossary](lexicon.md)
