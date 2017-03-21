@@ -1,6 +1,6 @@
 module.exports = {
     // Documentation for GitBook is stored under "docs"d
-    root: './docs',
+    // root: './docs',
     title: "环球易购前端开发规范",
     author: "wuuashen",
     "links" : {
